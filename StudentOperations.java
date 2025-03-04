@@ -36,4 +36,26 @@ class StudentOperations {
     }
 
 
+
+    public void searchByName(String name) {
+        for (Student student : students) {
+            if (student.getName().equalsIgnoreCase(name)) {
+                student.display();
+                return;
+            }
+        }
+        System.out.println("Student with name '" + name + "' not found.");
+    }
+
+    public void searchByPosition(int pos) {
+        if (pos >= 0 && pos < students.size()) {
+            students.get(pos).display();
+        } else {
+            System.out.println("Invalid position.");
+        }
+    }
+
+
+
+    
 }
