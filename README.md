@@ -1,5 +1,11 @@
 # Student Management System
 
+*Name :*`Vidish Ketankumar Mistry`
+
+*PRN :*`23070126146`
+
+*Batch :*`B-3`
+
 ## Introduction
 
 This is a simple **Java-based Student Management System** that allows users to:
