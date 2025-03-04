@@ -57,5 +57,35 @@ class StudentOperations {
 
 
 
-    
+    public void updateStudent(long prn) {
+        for (Student student : students) {
+            if (student.getPRN() == prn) {
+                System.out.println("Updating student details...");
+                System.out.print("Enter new Name: ");
+                String name = scan.nextLine();
+                System.out.print("Enter new Date of Birth (YYYY-MM-DD): ");
+                String dob = scan.next();
+                System.out.print("Enter new Marks: ");
+                double marks = scan.nextDouble();
+                
+                student.setName(name);
+                student.setDoB(dob);
+                student.setMarks(marks);
+                System.out.println("Student details updated successfully.");
+                return;
+            }
+        }
+        System.out.println("Student with PRN " + prn + " not found.");
+    }
+
+    public void deleteStudent(long prn) {
+        for (Student student : students) {
+            if (student.getPRN() == prn) {
+                students.remove(student);
+                System.out.println("Student with PRN " + prn + " removed.");
+                return;
+            }
+        }
+        System.out.println("Student with PRN " + prn + " not found.");
+    }
 }
